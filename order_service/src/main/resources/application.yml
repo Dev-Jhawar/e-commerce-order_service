@@ -1,0 +1,9 @@
+grpc:
+  client:
+    user-service:
+      address: static://localhost:9091
+      negotiationType: plaintext
+
+    product-service:
+      address: static://localhost:9092
+      negotiationType: plaintext

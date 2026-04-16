@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.demo.grpc";
+option java_outer_classname = "UserProto";
+
+service UserService {
+
+  rpc GetUserById (UserRequest) returns (UserResponse);
+
+  rpc GetAllUsers (Empty) returns (UserList);
+}
+
+message Empty {}
+
+message UserRequest {
+  int64 id = 1;
+}
+
+message UserResponse {
+  int64 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string email = 4;
+  string gender = 5;
+  string role = 6;
+  string number = 7;
+  string address = 8;
+}
+
+message UserList {
+  repeated UserResponse users = 1;
+}
