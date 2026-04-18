@@ -1,5 +1,6 @@
 package com.example.order_service.model;
 
+import com.example.order_service.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +26,9 @@ public class Order {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
     private List<OrderItem> items;
+
+    private double totalAmount;
+    private Status status;
 
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;

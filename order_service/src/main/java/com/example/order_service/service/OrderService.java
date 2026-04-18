@@ -1,9 +1,21 @@
 package com.example.order_service.service;
 
 import com.example.order_service.dto.OrderRequest;
-import com.example.order_service.model.Order;
+import com.example.order_service.dto.OrderResponse;
+
+import java.util.List;
+
 
 public interface OrderService {
-    Order createOrder(OrderRequest orderRequest);
+
+    List<OrderResponse> getAllOrders();
+
+    OrderResponse getOrderById(Long orderId);
+
+    OrderResponse createOrder(OrderRequest orderRequest);
+
+    OrderResponse updateOrderById(Long orderId, OrderRequest orderRequest);
+
+    void deleteOrderById(Long orderId);
 
 }

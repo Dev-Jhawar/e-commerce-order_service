@@ -12,7 +12,7 @@ public class OrderRequest {
     @NotNull(message = "User ID is required.")
     private Long userId;
 
-    @NotEmpty(message = "Order must contain atleast one order.")
+    @NotEmpty(message = "Order must contain at Least one order.")
     @Valid
     private List<OrderItemRequest> items;
 

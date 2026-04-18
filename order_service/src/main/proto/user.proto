@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.example.demo.grpc";
+option java_package = "com.example.user_service.grpc";
 option java_outer_classname = "UserProto";
 
 service UserService {

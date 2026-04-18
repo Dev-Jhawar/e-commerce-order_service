@@ -1,3 +1,25 @@
+spring:
+  application:
+    name: order_service
+
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/e_commerce_order
+#    username: postgres
+#    password: your_password
+#    driver-class-name: org.postgresql.Driver
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: update
+#    show-sql: true
+#    open-in-view: false
+#    properties:
+#      hibernate:
+#        format_sql: true
+
+server:
+  port: 8083
+
 grpc:
   client:
     user-service:
@@ -7,3 +29,9 @@ grpc:
     product-service:
       address: static://localhost:9092
       negotiationType: plaintext
+
+#logging:
+#  level:
+#    root: INFO
+#    io.grpc: INFO
+#    org.hibernate.SQL: DEBUG
